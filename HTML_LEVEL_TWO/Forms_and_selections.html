@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Selections</title>
+  </head>
+  <body>
+    <h1>Hotel Feedback Form</h1>
+    <form method="get">
+      <h3>Are you from inside the India or Outside the India</h3>
+      <label for="inindia">Inside: </label>
+      <input for= "inindia" type="radio" name="loc" value="inside">
+      <label for="outindia">Outside: </label>
+      <input for="outindia" type ="radio" name="loc" value="outside"> <!-- if name is different then both will get selected -->
+
+      <p>How was your sercvice?</p>
+      <select name="stars">
+          <option value="Great">3</option>
+          <option value="Okay">2</option>
+          <option value="Bad">1</option>
+      </select>
+      <p>Any other Feedback</p>
+      <textarea name="mytext" rows="8" cols="80"></textarea>
+      <input type="submit" name="" value="Submit">
+    </form>
+  </body>
+</html>
