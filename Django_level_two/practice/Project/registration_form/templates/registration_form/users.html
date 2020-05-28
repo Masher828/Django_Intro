@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Users</title>
+  </head>
+  <body>
+    <h1>Here are your users:</h1>
+    {% if user_details %}
+      <table>
+        <thead>
+          <td>First Name</td>
+          <td>Last Name</td>
+          <td>Email</td>
+        </thead>
+        {% for details in user_details %}
+          <tr>
+            <td>{{details.first_name}}</td>
+            <td>{{details.last_name}}</td>
+            <td>{{details.email}}</td>
+          </tr>
+        {%endfor%}
+      </table>
+      {%else%}
+      <p>No data is present </p>
+      {%endif%}
+  </body>
+</html>

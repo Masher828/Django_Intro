@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% extends 'webapp/index.html' %}
+{% block content %}
+{% if not active %}
+<div class="jumbotron">
+  <form  method="post">
+    {%csrf_token%}
+    <label for="username">User Name : </label>
+    <input type="text" name="username" value="">
+    <br>
+    <label for="password">Password : </label>
+    <input type="password" name="password" value="">
+    <br>
+    <input type="submit" name="" value="Login">
+  </form>
+</div>
+{% else %}
+<h1>User logged in </h1>
+{% endif %}
+{% endblock %}
